@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Other Projects - Marcelo's Academic Webpage</title>
+  <!-- Importing a modern, clean font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <!-- CSS styles for a modern look -->
+  <style>
+    /* Reset base styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    /* Header styling */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Hero section for Other Projects */
+    .hero-other {
+      background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+      padding: 80px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-other h2 {
+      font-size: 2.8rem;
+    }
+    .hero-other p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    /* Projects Section */
+    #other-projects {
+      padding: 60px 0;
+    }
+    #other-projects h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .grid .card {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 calc(30% - 20px);
+      min-width: 280px;
+    }
+    .grid .card h3 {
+      margin-bottom: 10px;
+    }
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .grid {
+        flex-direction: column;
+      }
+      .grid .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Marcelo's Academic Page</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="other-projects.html">Other Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section for Other Projects -->
+  <div class="hero-other">
+    <div class="container">
+      <h2>Other Projects</h2>
+      <p>Discover additional works and initiatives beyond my core research.</p>
+    </div>
+  </div>
+  <!-- Projects Section -->
+  <section id="other-projects">
+    <div class="container">
+      <h2>Featured Initiatives</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Community Engagement</h3>
+          <p>This initiative focuses on projects that bridge academic theory and community practice, promoting local partnerships and social impact.</p>
+        </div>
+        <div class="card">
+          <h3>Policy Workshops</h3>
+          <p>A series of workshops designed to foster dialogue among policymakers, researchers, and the public to tackle contemporary challenges.</p>
+        </div>
+        <div class="card">
+          <h3>Data Visualization Projects</h3>
+          <p>Innovative projects that utilize data visualization techniques to enhance understanding of complex socioeconomic issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Marcelo's Academic Webpage. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- JavaScript to update the year dynamically -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
