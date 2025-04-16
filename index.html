@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcelo's Academic Webpage</title>
+  <!-- Importing a modern, clean font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <!-- CSS styles for a modern look -->
+  <style>
+    /* Resetting some base styles */
+    body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    /* Header styling */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header .container {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Hero section with a background image */
+    .hero {
+      background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+      padding: 100px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+    /* Section styling */
+    section {
+      padding: 60px 0;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    /* Card layout for research projects */
+    .card {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .grid .card {
+      flex: 1 1 calc(33.333% - 20px);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .grid .card {
+        flex: 1 1 100%;
+      }
+    }
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Marcelo's Academic Page</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <h2>Welcome to My Academic World</h2>
+      <p>Exploring the intersections of Political Science and Economics</p>
+      <button id="learnMore" style="padding: 10px 20px; font-size: 1rem; border: none; border-radius: 3px; cursor: pointer;">Learn More</button>
+    </div>
+  </div>
+  
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello, I am Marcelo, an academic passionate about Political Science and Economics. My research integrates theoretical frameworks with practical analysis to address contemporary issues in public policy and economic development.</p>
+    </div>
+  </section>
+  
+  <!-- Research Section -->
+  <section id="research">
+    <div class="container">
+      <h2>Research</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>An exploration of political institutions and their economic ramifications.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>An analytical study of policy impacts on economic growth within comparative frameworks.</p>
+        </div>
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>A detailed investigation into the governance structures influencing market economies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Publications Section -->
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <ul>
+        <li><strong>Paper Title One</strong> – Journal Name, Year</li>
+        <li><strong>Paper Title Two</strong> – Journal Name, Year</li>
+        <li><strong>Paper Title Three</strong> – Journal Name, Year</li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <div>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div>
+          <button type="submit" style="margin-top: 10px; padding: 10px 20px;">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Marcelo's Academic Webpage. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript for interactive functionality -->
+  <script>
+    // Smooth scrolling to the About section
+    document.getElementById('learnMore').addEventListener('click', function() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Handle the contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+      console.log('Contact Form Submission:', formData);
+      alert('Thank you for your message, ' + formData.name + '!');
+      event.target.reset();
+    });
+    
+    // Automatically update the current year in the footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
